@@ -20,6 +20,8 @@ class Settings(BaseSettings):
 
     stripe_secret_key: str = ""
     stripe_webhook_secret: str = ""
+    # True = fake payments with no Stripe account (see app/core/fake_stripe.py)
+    stripe_mock: bool = False
 
     # day 3: optional. Without a key the AI features answer with simple rules
     anthropic_api_key: str = ""

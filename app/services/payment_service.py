@@ -18,6 +18,9 @@ CURRENCY = "inr"
 
 
 def _stripe():
+    if settings.stripe_mock:  # no Stripe account (India sign-up is invite-only)
+        from app.core import fake_stripe
+        return fake_stripe
     if not settings.stripe_secret_key:
         raise HTTPException(
             status.HTTP_503_SERVICE_UNAVAILABLE,

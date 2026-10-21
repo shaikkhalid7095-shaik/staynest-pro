@@ -6,3 +6,5 @@ __pycache__/
 .vscode/
 screenshots/*.png
 screenshots/desktop.ini
+screenshots/*.png
+screenshots/desktop.ini
